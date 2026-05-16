@@ -5,6 +5,7 @@
 [node name="Node2D" type="Node2D" unique_id=2109689240]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082848868]
+modulate = Color(2.3133948, 2.3133948, 0, 1)
 texture = ExtResource("1_ig7tw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=721319511]
