@@ -8,7 +8,7 @@
 script = ExtResource("1_0xm2m")
 
 [node name="EixoX" type="Line2D" parent="." unique_id=2145659865]
-points = PackedVector2Array(-2952, 0, 1472, 0)
+points = PackedVector2Array(-2952, 0, 2832, 0)
 width = 2.0
 default_color = Color(0, 0, 0, 1)
 
