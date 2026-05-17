@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://cdshdnccef1ok"]
 
+[ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bwuqydcirispy" path="res://icon.svg" id="1_ig7tw"]
 
-[node name="Node2D" type="Node2D" unique_id=2109689240]
+[node name="Main" type="Node2D" unique_id=2109689240]
+script = ExtResource("1_0xm2m")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082848868]
+[node name="EixoX" type="Line2D" parent="." unique_id=2145659865]
+points = PackedVector2Array(-272, 0, 288, 0)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Joao pedro" type="Sprite2D" parent="." unique_id=2082848868]
+visible = false
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_ig7tw")
 
