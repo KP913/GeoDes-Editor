@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bwuqydcirispy" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://camera.gd" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=2109689240]
 script = ExtResource("1_0xm2m")
 
 [node name="EixoX" type="Line2D" parent="." unique_id=2145659865]
-points = PackedVector2Array(-272, 0, 288, 0)
+points = PackedVector2Array(-2952, 0, 1472, 0)
 width = 2.0
 default_color = Color(0, 0, 0, 1)
 
@@ -16,4 +17,7 @@ visible = false
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_ig7tw")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=721319511]
+[node name="Camera" type="Camera2D" parent="." unique_id=721319511]
+script = ExtResource("3_h2yge")
+
+[node name="EixoXLinhas" type="Node2D" parent="." unique_id=1188559432]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cgn5rs88jcfvu"]
+
+[node name="EixoXLinha" type="Line2D" unique_id=763052029]
+points = PackedVector2Array(0, -12, 0, 12)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1440869033]
+modulate = Color(0, 0, 0, 1)
+offset_left = 4.0
+offset_top = -24.0
+offset_right = 14.0
+offset_bottom = -1.0
+text = "0"
