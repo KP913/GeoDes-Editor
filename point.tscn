@@ -1,22 +1,67 @@
-[gd_scene format=3 uid="uid://xl02xtkm2yfk"]
+[gd_scene format=3 uid="uid://drfcnwceb6828"]
 
 [ext_resource type="Texture2D" uid="uid://dsa2ghncpk0gm" path="res://gfx/point.png" id="1_7fkqo"]
+[ext_resource type="Script" uid="uid://duv32hv1dl2mx" path="res://point.gd" id="1_q733i"]
 
 [node name="Point" type="Node2D" unique_id=55819580]
+script = ExtResource("1_q733i")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1163321947]
 points = PackedVector2Array(0, -56, 0, 0, 0, 56)
-width = 6.0
+width = 3.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="LineP2P3" type="Line2D" parent="." unique_id=290971360]
+visible = false
+points = PackedVector2Array(0, -56, 0, 0, 0, 0)
+width = 3.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="LineP1P3" type="Line2D" parent="." unique_id=1036742697]
+visible = false
+width = 3.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="P1" type="Sprite2D" parent="." unique_id=139141785]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(0, -56)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_7fkqo")
 
 [node name="P2" type="Sprite2D" parent="." unique_id=882615360]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(0, 56)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_7fkqo")
+
+[node name="P3" type="Sprite2D" parent="." unique_id=1053498965]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 56)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7fkqo")
+
+[node name="LabelPoint1" type="Label" parent="." unique_id=1513073954]
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 56.0
+offset_bottom = 79.0
+text = "P1"
+
+[node name="LabelPoint2" type="Label" parent="." unique_id=2118741986]
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.0
+offset_top = -80.0
+offset_right = 56.0
+offset_bottom = -57.0
+text = "P2"
+
+[node name="LabelPoint3" type="Label" parent="." unique_id=146524339]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 16.0
+offset_top = -80.0
+offset_right = 56.0
+offset_bottom = -57.0
+text = "P2"

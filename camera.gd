@@ -9,7 +9,7 @@ func _input(event: InputEvent) -> void:
 			is_panning = true
 		if !event.pressed && event.button_index == MOUSE_BUTTON_LEFT:
 			is_panning = false
-	
+
 	if is_panning && event is InputEventMouseMotion:
 		var vector = event.relative
 		position -= vector

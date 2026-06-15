@@ -9,8 +9,13 @@ script = ExtResource("1_0xm2m")
 
 [node name="EixoX" type="Line2D" parent="." unique_id=2145659865]
 position = Vector2(-1604.8301, 0.37452292)
-scale = Vector2(1.1872613, 1.1872615)
 points = PackedVector2Array(-2952, 0, 8568, 0)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="EixoY" type="Line2D" parent="." unique_id=1256528787]
+visible = false
+points = PackedVector2Array(0, -2951, 0, 800000)
 width = 2.0
 default_color = Color(0, 0, 0, 1)
 
@@ -23,3 +28,5 @@ texture = ExtResource("1_ig7tw")
 script = ExtResource("3_h2yge")
 
 [node name="EixoXLinhas" type="Node2D" parent="." unique_id=1188559432]
+
+[node name="Pontos" type="Node2D" parent="." unique_id=334612605]
