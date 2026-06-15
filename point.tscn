@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xl02xtkm2yfk"]
+
+[ext_resource type="Texture2D" uid="uid://dsa2ghncpk0gm" path="res://gfx/point.png" id="1_7fkqo"]
+
+[node name="Point" type="Node2D" unique_id=55819580]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1163321947]
+points = PackedVector2Array(0, -56, 0, 0, 0, 56)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="P1" type="Sprite2D" parent="." unique_id=139141785]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -56)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7fkqo")
+
+[node name="P2" type="Sprite2D" parent="." unique_id=882615360]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 56)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7fkqo")
