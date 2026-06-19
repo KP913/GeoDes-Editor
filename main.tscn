@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cdshdnccef1ok"]
 
 [ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://bwuqydcirispy" path="res://icon.svg" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://camera.gd" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=2109689240]
@@ -19,14 +18,30 @@ points = PackedVector2Array(0, -2951, 0, 800000)
 width = 2.0
 default_color = Color(0, 0, 0, 1)
 
-[node name="Joao pedro" type="Sprite2D" parent="." unique_id=2082848868]
-visible = false
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_ig7tw")
-
 [node name="Camera" type="Camera2D" parent="." unique_id=721319511]
 script = ExtResource("3_h2yge")
 
 [node name="EixoXLinhas" type="Node2D" parent="." unique_id=1188559432]
 
 [node name="Pontos" type="Node2D" parent="." unique_id=334612605]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1573319556]
+
+[node name="AddPoint" type="Button" parent="CanvasLayer" unique_id=732146237]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 61.0
+theme_override_constants/line_spacing = -16
+theme_override_font_sizes/font_size = 32
+text = "+"
+
+[node name="3aProjecao" type="CheckButton" parent="CanvasLayer" unique_id=512468806]
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 194.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3a projecao"
+
+[connection signal="toggled" from="CanvasLayer/3aProjecao" to="." method="_on_a_projecao_toggled"]

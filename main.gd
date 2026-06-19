@@ -1,9 +1,9 @@
 extends Node2D
 
-var points := [Vector3(-1,2,-3)]
+var points := [Vector3(1,2,3)]
 var inicialpointname := "A"
 var pointindice := 0
-var is_P3_visible := true
+var is_P3_visible := false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,3 +36,10 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	pass
+
+
+func _on_a_projecao_toggled(toggled_on: bool) -> void:
+	is_P3_visible = toggled_on
+	$EixoY.visible = toggled_on
+	
+	
