@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://camera.gd" id="3_h2yge"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0.72, 0.72, 0.72, 1)
+
+[sub_resource type="Gradient" id="Gradient_h2yge"]
+offsets = PackedFloat32Array(0.92086333, 0.94244605, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.52967745, 0.52967745, 0.52967745, 0.33814043, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1bvp3"]
+gradient = SubResource("Gradient_h2yge")
+fill = 2
+fill_from = Vector2(0.49261084, 0.5073892)
+fill_to = Vector2(0.03448276, 0.039408866)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lquwl"]
+texture = SubResource("GradientTexture2D_1bvp3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.9549531, 0.9549531, 0.9549531, 1)
+
 [node name="Main" type="Node2D" unique_id=2109689240]
 script = ExtResource("1_0xm2m")
 
@@ -25,9 +44,9 @@ script = ExtResource("3_h2yge")
 
 [node name="Pontos" type="Node2D" parent="." unique_id=334612605]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1573319556]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1573319556]
 
-[node name="AddPoint" type="Button" parent="CanvasLayer" unique_id=732146237]
+[node name="AddPoint" type="Button" parent="HUD" unique_id=732146237]
 offset_left = 16.0
 offset_top = 8.0
 offset_right = 48.0
@@ -36,7 +55,7 @@ theme_override_constants/line_spacing = -16
 theme_override_font_sizes/font_size = 32
 text = "+"
 
-[node name="3aProjecao" type="CheckButton" parent="CanvasLayer" unique_id=512468806]
+[node name="3aProjecao" type="CheckButton" parent="HUD" unique_id=512468806]
 offset_left = 56.0
 offset_top = 16.0
 offset_right = 194.0
@@ -44,4 +63,180 @@ offset_bottom = 47.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3a projecao"
 
-[connection signal="toggled" from="CanvasLayer/3aProjecao" to="." method="_on_a_projecao_toggled"]
+[node name="Control" type="Control" parent="HUD" unique_id=1195964123]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 432.00003
+offset_top = 224.00002
+offset_right = 472.00003
+offset_bottom = 264.0
+scale = Vector2(1.2, 1.2)
+
+[node name="Panelbackshadow" type="Panel" parent="HUD/Control" unique_id=479990123]
+layout_mode = 0
+offset_left = -112.00003
+offset_top = -32.000015
+offset_right = 208.0
+offset_bottom = 111.999985
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="Panelshadow" type="Panel" parent="HUD/Control" unique_id=1558648354]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 184.0
+offset_right = 664.0
+offset_bottom = 352.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lquwl")
+
+[node name="Panel" type="Panel" parent="HUD/Control" unique_id=477685118]
+layout_mode = 0
+offset_left = -120.00003
+offset_top = -40.000015
+offset_right = 200.0
+offset_bottom = 103.999985
+theme_override_styles/panel = SubResource("StyleBoxFlat_7mycd")
+
+[node name="Label" type="Label" parent="HUD/Control" unique_id=1068038616]
+layout_mode = 0
+offset_left = -104.00003
+offset_top = -24.000015
+offset_right = 77.99997
+offset_bottom = -1.0000153
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Adiciona ponto: (X,Y,Z)"
+
+[node name="LineEdit" type="LineEdit" parent="HUD/Control" unique_id=828946344]
+layout_mode = 0
+offset_left = -104.00003
+offset_top = 7.9999847
+offset_right = 71.99997
+offset_bottom = 55.999985
+
+[node name="Button0" type="Button" parent="HUD/Control" unique_id=1990661610]
+layout_mode = 0
+offset_left = 87.99994
+offset_top = -24.000015
+offset_right = 105.99994
+offset_bottom = -2.0000153
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="Button1" type="Button" parent="HUD/Control" unique_id=1393596512]
+layout_mode = 0
+offset_left = 119.99994
+offset_top = -24.000015
+offset_right = 137.99994
+offset_bottom = -2.0000153
+theme_override_font_sizes/font_size = 10
+text = "1"
+
+[node name="Button2" type="Button" parent="HUD/Control" unique_id=1104696329]
+layout_mode = 0
+offset_left = 151.99994
+offset_top = -24.000015
+offset_right = 169.99994
+offset_bottom = -2.0000153
+theme_override_font_sizes/font_size = 10
+text = "2"
+
+[node name="Button3" type="Button" parent="HUD/Control" unique_id=1398399224]
+layout_mode = 0
+offset_left = 87.99994
+offset_top = 7.9999847
+offset_right = 105.99994
+offset_bottom = 29.999985
+theme_override_font_sizes/font_size = 10
+text = "3"
+
+[node name="Button4" type="Button" parent="HUD/Control" unique_id=804654626]
+layout_mode = 0
+offset_left = 119.99994
+offset_top = 7.9999847
+offset_right = 137.99994
+offset_bottom = 29.999985
+theme_override_font_sizes/font_size = 10
+text = "4"
+
+[node name="Button5" type="Button" parent="HUD/Control" unique_id=1780430022]
+layout_mode = 0
+offset_left = 151.99994
+offset_top = 7.9999847
+offset_right = 169.99994
+offset_bottom = 29.999985
+theme_override_font_sizes/font_size = 10
+text = "5"
+
+[node name="Button6" type="Button" parent="HUD/Control" unique_id=1724398271]
+layout_mode = 0
+offset_left = 87.99994
+offset_top = 39.999985
+offset_right = 105.99994
+offset_bottom = 61.999985
+theme_override_font_sizes/font_size = 10
+text = "6"
+
+[node name="Button7" type="Button" parent="HUD/Control" unique_id=1235349357]
+layout_mode = 0
+offset_left = 119.99994
+offset_top = 39.999985
+offset_right = 137.99994
+offset_bottom = 61.999985
+theme_override_font_sizes/font_size = 10
+text = "7"
+
+[node name="Button8" type="Button" parent="HUD/Control" unique_id=944749597]
+layout_mode = 0
+offset_left = 151.99994
+offset_top = 39.999985
+offset_right = 169.99994
+offset_bottom = 61.999985
+theme_override_font_sizes/font_size = 10
+text = "8"
+
+[node name="Button9" type="Button" parent="HUD/Control" unique_id=831665610]
+layout_mode = 0
+offset_left = 87.99994
+offset_top = 71.999985
+offset_right = 105.99994
+offset_bottom = 93.999985
+theme_override_font_sizes/font_size = 10
+text = "9"
+
+[node name="ButtonComma" type="Button" parent="HUD/Control" unique_id=1208481398]
+layout_mode = 0
+offset_left = 119.99994
+offset_top = 71.999985
+offset_right = 137.99994
+offset_bottom = 93.999985
+theme_override_font_sizes/font_size = 10
+text = ","
+
+[node name="ButtonDelete" type="Button" parent="HUD/Control" unique_id=372441683]
+layout_mode = 0
+offset_left = 151.99994
+offset_top = 71.999985
+offset_right = 175.99994
+offset_bottom = 93.999985
+theme_override_font_sizes/font_size = 10
+text = "Del"
+
+[node name="ButtonSubmit" type="Button" parent="HUD/Control" unique_id=1442176851]
+layout_mode = 0
+offset_left = 15.9999695
+offset_top = 63.999985
+offset_right = 71.99997
+offset_bottom = 93.999985
+theme_override_font_sizes/font_size = 10
+text = "Submeter"
+
+[node name="ButtonClose" type="Button" parent="HUD/Control" unique_id=37725881]
+layout_mode = 0
+offset_left = 183.99994
+offset_top = -40.000015
+offset_right = 199.99994
+offset_bottom = -18.000015
+theme_override_font_sizes/font_size = 10
+text = "X"
+
+[connection signal="toggled" from="HUD/3aProjecao" to="." method="_on_a_projecao_toggled"]
