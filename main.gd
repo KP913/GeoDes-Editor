@@ -22,14 +22,8 @@ func _ready() -> void:
 		#TODO Meter texto na linha vertical
 		
 	for coord in points:
-		var ponto = preload("res://point.tscn").instantiate()
-		ponto.coords = coord
-		ponto.name = char(ord(inicialpointname)+pointindice)
-		pointindice += 1
-		
-		$Pontos.add_child(ponto)
+		add_point(coord)
 	
-		
 		# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -42,4 +36,10 @@ func _on_a_projecao_toggled(toggled_on: bool) -> void:
 	is_P3_visible = toggled_on
 	$EixoY.visible = toggled_on
 	
-	
+func add_point(coord: Vector3):
+	var ponto = preload("res://point.tscn").instantiate()
+	ponto.coords = coord
+	ponto.name = char(ord(inicialpointname)+pointindice)
+	pointindice += 1
+	$Pontos.add_child(ponto)
+		

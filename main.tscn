@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://cdshdnccef1ok"]
 
 [ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://8x08yenifn83" path="res://add_point_popup.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://camera.gd" id="3_h2yge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0.72, 0.72, 0.72, 1)
 
 [sub_resource type="Gradient" id="Gradient_h2yge"]
-offsets = PackedFloat32Array(0.92086333, 0.94244605, 1)
-colors = PackedColorArray(1, 1, 1, 0, 0.52967745, 0.52967745, 0.52967745, 0.33814043, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.92086333, 0.94244605)
+colors = PackedColorArray(0.14, 0.14, 0.14, 1, 0.52967745, 0.52967745, 0.52967745, 0.33814043, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1bvp3"]
 gradient = SubResource("Gradient_h2yge")
@@ -63,16 +64,30 @@ offset_bottom = 47.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3a projecao"
 
-[node name="Control" type="Control" parent="HUD" unique_id=1195964123]
+[node name="AddPointPopup" type="Control" parent="HUD" unique_id=1195964123]
+visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 432.00003
-offset_top = 224.00002
-offset_right = 472.00003
-offset_bottom = 264.0
+offset_left = 448.00003
+offset_top = 240.0
+offset_right = 488.00003
+offset_bottom = 280.0
 scale = Vector2(1.2, 1.2)
+script = ExtResource("3_1bvp3")
+metadata/_edit_group_ = true
 
-[node name="Panelbackshadow" type="Panel" parent="HUD/Control" unique_id=479990123]
+[node name="ErrorMessage" type="Label" parent="HUD/AddPointPopup" unique_id=1493610642]
+visible = false
+layout_mode = 0
+offset_left = -360.0
+offset_top = 213.33331
+offset_right = -192.0
+offset_bottom = 249.33331
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Invalid Point!"
+
+[node name="Panelbackshadow" type="Panel" parent="HUD/AddPointPopup" unique_id=479990123]
 layout_mode = 0
 offset_left = -112.00003
 offset_top = -32.000015
@@ -80,16 +95,16 @@ offset_right = 208.0
 offset_bottom = 111.999985
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
-[node name="Panelshadow" type="Panel" parent="HUD/Control" unique_id=1558648354]
-visible = false
+[node name="Panelshadow" type="Panel" parent="HUD/AddPointPopup" unique_id=1558648354]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 184.0
-offset_right = 664.0
-offset_bottom = 352.0
+offset_left = -146.667
+offset_top = -55.7
+offset_right = -70.66701
+offset_bottom = -21.2
+scale = Vector2(5, 5)
 theme_override_styles/panel = SubResource("StyleBoxTexture_lquwl")
 
-[node name="Panel" type="Panel" parent="HUD/Control" unique_id=477685118]
+[node name="Panel" type="Panel" parent="HUD/AddPointPopup" unique_id=477685118]
 layout_mode = 0
 offset_left = -120.00003
 offset_top = -40.000015
@@ -97,7 +112,7 @@ offset_right = 200.0
 offset_bottom = 103.999985
 theme_override_styles/panel = SubResource("StyleBoxFlat_7mycd")
 
-[node name="Label" type="Label" parent="HUD/Control" unique_id=1068038616]
+[node name="LabelPopup" type="Label" parent="HUD/AddPointPopup" unique_id=1068038616]
 layout_mode = 0
 offset_left = -104.00003
 offset_top = -24.000015
@@ -106,14 +121,14 @@ offset_bottom = -1.0000153
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Adiciona ponto: (X,Y,Z)"
 
-[node name="LineEdit" type="LineEdit" parent="HUD/Control" unique_id=828946344]
+[node name="LineEdit" type="LineEdit" parent="HUD/AddPointPopup" unique_id=828946344]
 layout_mode = 0
-offset_left = -104.00003
-offset_top = 7.9999847
-offset_right = 71.99997
-offset_bottom = 55.999985
+offset_left = -106.66668
+offset_top = 6.6666594
+offset_right = 69.33332
+offset_bottom = 54.66666
 
-[node name="Button0" type="Button" parent="HUD/Control" unique_id=1990661610]
+[node name="Button0" type="Button" parent="HUD/AddPointPopup" unique_id=1990661610]
 layout_mode = 0
 offset_left = 87.99994
 offset_top = -24.000015
@@ -122,7 +137,7 @@ offset_bottom = -2.0000153
 theme_override_font_sizes/font_size = 10
 text = "0"
 
-[node name="Button1" type="Button" parent="HUD/Control" unique_id=1393596512]
+[node name="Button1" type="Button" parent="HUD/AddPointPopup" unique_id=1393596512]
 layout_mode = 0
 offset_left = 119.99994
 offset_top = -24.000015
@@ -131,7 +146,7 @@ offset_bottom = -2.0000153
 theme_override_font_sizes/font_size = 10
 text = "1"
 
-[node name="Button2" type="Button" parent="HUD/Control" unique_id=1104696329]
+[node name="Button2" type="Button" parent="HUD/AddPointPopup" unique_id=1104696329]
 layout_mode = 0
 offset_left = 151.99994
 offset_top = -24.000015
@@ -140,7 +155,7 @@ offset_bottom = -2.0000153
 theme_override_font_sizes/font_size = 10
 text = "2"
 
-[node name="Button3" type="Button" parent="HUD/Control" unique_id=1398399224]
+[node name="Button3" type="Button" parent="HUD/AddPointPopup" unique_id=1398399224]
 layout_mode = 0
 offset_left = 87.99994
 offset_top = 7.9999847
@@ -149,7 +164,7 @@ offset_bottom = 29.999985
 theme_override_font_sizes/font_size = 10
 text = "3"
 
-[node name="Button4" type="Button" parent="HUD/Control" unique_id=804654626]
+[node name="Button4" type="Button" parent="HUD/AddPointPopup" unique_id=804654626]
 layout_mode = 0
 offset_left = 119.99994
 offset_top = 7.9999847
@@ -158,7 +173,7 @@ offset_bottom = 29.999985
 theme_override_font_sizes/font_size = 10
 text = "4"
 
-[node name="Button5" type="Button" parent="HUD/Control" unique_id=1780430022]
+[node name="Button5" type="Button" parent="HUD/AddPointPopup" unique_id=1780430022]
 layout_mode = 0
 offset_left = 151.99994
 offset_top = 7.9999847
@@ -167,7 +182,7 @@ offset_bottom = 29.999985
 theme_override_font_sizes/font_size = 10
 text = "5"
 
-[node name="Button6" type="Button" parent="HUD/Control" unique_id=1724398271]
+[node name="Button6" type="Button" parent="HUD/AddPointPopup" unique_id=1724398271]
 layout_mode = 0
 offset_left = 87.99994
 offset_top = 39.999985
@@ -176,7 +191,7 @@ offset_bottom = 61.999985
 theme_override_font_sizes/font_size = 10
 text = "6"
 
-[node name="Button7" type="Button" parent="HUD/Control" unique_id=1235349357]
+[node name="Button7" type="Button" parent="HUD/AddPointPopup" unique_id=1235349357]
 layout_mode = 0
 offset_left = 119.99994
 offset_top = 39.999985
@@ -185,7 +200,7 @@ offset_bottom = 61.999985
 theme_override_font_sizes/font_size = 10
 text = "7"
 
-[node name="Button8" type="Button" parent="HUD/Control" unique_id=944749597]
+[node name="Button8" type="Button" parent="HUD/AddPointPopup" unique_id=944749597]
 layout_mode = 0
 offset_left = 151.99994
 offset_top = 39.999985
@@ -194,7 +209,7 @@ offset_bottom = 61.999985
 theme_override_font_sizes/font_size = 10
 text = "8"
 
-[node name="Button9" type="Button" parent="HUD/Control" unique_id=831665610]
+[node name="Button9" type="Button" parent="HUD/AddPointPopup" unique_id=831665610]
 layout_mode = 0
 offset_left = 87.99994
 offset_top = 71.999985
@@ -203,7 +218,7 @@ offset_bottom = 93.999985
 theme_override_font_sizes/font_size = 10
 text = "9"
 
-[node name="ButtonComma" type="Button" parent="HUD/Control" unique_id=1208481398]
+[node name="ButtonComma" type="Button" parent="HUD/AddPointPopup" unique_id=1208481398]
 layout_mode = 0
 offset_left = 119.99994
 offset_top = 71.999985
@@ -212,7 +227,7 @@ offset_bottom = 93.999985
 theme_override_font_sizes/font_size = 10
 text = ","
 
-[node name="ButtonDelete" type="Button" parent="HUD/Control" unique_id=372441683]
+[node name="ButtonDelete" type="Button" parent="HUD/AddPointPopup" unique_id=372441683]
 layout_mode = 0
 offset_left = 151.99994
 offset_top = 71.999985
@@ -221,7 +236,7 @@ offset_bottom = 93.999985
 theme_override_font_sizes/font_size = 10
 text = "Del"
 
-[node name="ButtonSubmit" type="Button" parent="HUD/Control" unique_id=1442176851]
+[node name="ButtonSubmit" type="Button" parent="HUD/AddPointPopup" unique_id=1442176851]
 layout_mode = 0
 offset_left = 15.9999695
 offset_top = 63.999985
@@ -230,13 +245,29 @@ offset_bottom = 93.999985
 theme_override_font_sizes/font_size = 10
 text = "Submeter"
 
-[node name="ButtonClose" type="Button" parent="HUD/Control" unique_id=37725881]
+[node name="ButtonClose" type="Button" parent="HUD/AddPointPopup" unique_id=37725881]
 layout_mode = 0
-offset_left = 183.99994
-offset_top = -40.000015
-offset_right = 199.99994
-offset_bottom = -18.000015
+offset_left = 179.99995
+offset_top = -33.333347
+offset_right = 195.99995
+offset_bottom = -11.333347
 theme_override_font_sizes/font_size = 10
 text = "X"
 
+[connection signal="pressed" from="HUD/AddPoint" to="HUD/AddPointPopup" method="popupoppen"]
 [connection signal="toggled" from="HUD/3aProjecao" to="." method="_on_a_projecao_toggled"]
+[connection signal="text_changed" from="HUD/AddPointPopup/LineEdit" to="HUD/AddPointPopup" method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="HUD/AddPointPopup/Button0" to="HUD/AddPointPopup" method="add_char" binds= ["0"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button1" to="HUD/AddPointPopup" method="add_char" binds= ["1"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button2" to="HUD/AddPointPopup" method="add_char" binds= ["2"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button3" to="HUD/AddPointPopup" method="add_char" binds= ["3"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button4" to="HUD/AddPointPopup" method="add_char" binds= ["4"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button5" to="HUD/AddPointPopup" method="add_char" binds= ["5"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button6" to="HUD/AddPointPopup" method="add_char" binds= ["6"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button7" to="HUD/AddPointPopup" method="add_char" binds= ["7"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button8" to="HUD/AddPointPopup" method="add_char" binds= ["8"]]
+[connection signal="pressed" from="HUD/AddPointPopup/Button9" to="HUD/AddPointPopup" method="add_char" binds= ["9"]]
+[connection signal="pressed" from="HUD/AddPointPopup/ButtonComma" to="HUD/AddPointPopup" method="add_char" binds= [","]]
+[connection signal="pressed" from="HUD/AddPointPopup/ButtonDelete" to="HUD/AddPointPopup" method="add_char" binds= ["DEL"]]
+[connection signal="pressed" from="HUD/AddPointPopup/ButtonSubmit" to="HUD/AddPointPopup" method="submit_text"]
+[connection signal="pressed" from="HUD/AddPointPopup/ButtonClose" to="HUD/AddPointPopup" method="close_popup"]
