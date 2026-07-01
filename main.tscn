@@ -65,7 +65,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "3a projecao"
 
 [node name="AddPointPopup" type="Control" parent="HUD" unique_id=1195964123]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 448.00003
@@ -74,7 +73,6 @@ offset_right = 488.00003
 offset_bottom = 280.0
 scale = Vector2(1.2, 1.2)
 script = ExtResource("3_1bvp3")
-metadata/_edit_group_ = true
 
 [node name="ErrorMessage" type="Label" parent="HUD/AddPointPopup" unique_id=1493610642]
 visible = false
@@ -229,19 +227,19 @@ text = ","
 
 [node name="ButtonDelete" type="Button" parent="HUD/AddPointPopup" unique_id=372441683]
 layout_mode = 0
-offset_left = 151.99994
-offset_top = 71.999985
-offset_right = 175.99994
-offset_bottom = 93.999985
+offset_left = -106.66669
+offset_top = 66.66666
+offset_right = -76.00003
+offset_bottom = 92.66666
 theme_override_font_sizes/font_size = 10
 text = "Del"
 
 [node name="ButtonSubmit" type="Button" parent="HUD/AddPointPopup" unique_id=1442176851]
 layout_mode = 0
-offset_left = 15.9999695
-offset_top = 63.999985
-offset_right = 71.99997
-offset_bottom = 93.999985
+offset_left = 13.333
+offset_top = 64.0
+offset_right = 69.33301
+offset_bottom = 94.0
 theme_override_font_sizes/font_size = 10
 text = "Submeter"
 
@@ -253,6 +251,15 @@ offset_right = 195.99995
 offset_bottom = -11.333347
 theme_override_font_sizes/font_size = 10
 text = "X"
+
+[node name="ButtonMinus" type="Button" parent="HUD/AddPointPopup" unique_id=1479034099]
+layout_mode = 0
+offset_left = 153.333
+offset_top = 72.0
+offset_right = 171.333
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 10
+text = "-"
 
 [connection signal="pressed" from="HUD/AddPoint" to="HUD/AddPointPopup" method="popupoppen"]
 [connection signal="toggled" from="HUD/3aProjecao" to="." method="_on_a_projecao_toggled"]
@@ -271,3 +278,4 @@ text = "X"
 [connection signal="pressed" from="HUD/AddPointPopup/ButtonDelete" to="HUD/AddPointPopup" method="add_char" binds= ["DEL"]]
 [connection signal="pressed" from="HUD/AddPointPopup/ButtonSubmit" to="HUD/AddPointPopup" method="submit_text"]
 [connection signal="pressed" from="HUD/AddPointPopup/ButtonClose" to="HUD/AddPointPopup" method="close_popup"]
+[connection signal="pressed" from="HUD/AddPointPopup/ButtonMinus" to="HUD/AddPointPopup" method="add_char" binds= ["-"]]
