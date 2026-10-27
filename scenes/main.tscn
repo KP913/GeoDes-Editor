@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cdshdnccef1ok"]
 
-[ext_resource type="Script" uid="uid://00ch8la2k767" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://8x08yenifn83" path="res://add_point_popup.gd" id="3_1bvp3"]
-[ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://camera.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://00ch8la2k767" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cjync045ce8j2" path="res://scripts/camera.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://8x08yenifn83" path="res://scripts/add_point_popup.gd" id="3_sugp2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0.72, 0.72, 0.72, 1)
@@ -24,7 +24,7 @@ texture = SubResource("GradientTexture2D_1bvp3")
 bg_color = Color(0.9549531, 0.9549531, 0.9549531, 1)
 
 [node name="Main" type="Node2D" unique_id=2109689240]
-script = ExtResource("1_0xm2m")
+script = ExtResource("1_sugp2")
 
 [node name="EixoX" type="Line2D" parent="." unique_id=2145659865]
 position = Vector2(-1604.8301, 0.37452292)
@@ -39,7 +39,7 @@ width = 2.0
 default_color = Color(0, 0, 0, 1)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=721319511]
-script = ExtResource("3_h2yge")
+script = ExtResource("2_jyhfs")
 
 [node name="EixoXLinhas" type="Node2D" parent="." unique_id=1188559432]
 
@@ -72,7 +72,7 @@ offset_top = 240.0
 offset_right = 488.00003
 offset_bottom = 280.0
 scale = Vector2(1.2, 1.2)
-script = ExtResource("3_1bvp3")
+script = ExtResource("3_sugp2")
 
 [node name="ErrorMessage" type="Label" parent="HUD/AddPointPopup" unique_id=1493610642]
 visible = false

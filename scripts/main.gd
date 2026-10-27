@@ -1,6 +1,6 @@
 extends Node2D
 
-var points := [Vector3(1,2,3)]
+var testing_points := [Vector3(1,2,3)]
 var inicialpointname := "A"
 var pointindice := 0
 var is_P3_visible := false
@@ -11,7 +11,7 @@ func _ready() -> void:
 	var linhas := range(-100,101)
 	
 	for pos in linhas:
-		var linha = preload("res://eixo_x_linha.tscn").instantiate()
+		var linha = preload("res://scenes/eixo_x_linha.tscn").instantiate()
 		linha.position.x = pos*-48
 		linha.get_node("Label").text = str(pos)
 		
@@ -21,7 +21,7 @@ func _ready() -> void:
 		$EixoY.show()
 		#TODO Meter texto na linha vertical
 		
-	for coord in points:
+	for coord in testing_points:
 		add_point(coord)
 	
 		# Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,7 +37,7 @@ func _on_a_projecao_toggled(toggled_on: bool) -> void:
 	$EixoY.visible = toggled_on
 	
 func add_point(coord: Vector3):
-	var ponto = preload("res://point.tscn").instantiate()
+	var ponto = preload("res://scenes/point.tscn").instantiate()
 	ponto.coords = coord
 	ponto.name = char(ord(inicialpointname)+pointindice)
 	pointindice += 1
