@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 		set_P2P3_line()
 		set_P1P3_line()
 		make_P3_visible()
+	else:
+		make_P3_invisible()
 
 func set_P1P2_position ():
 	$P1.position.x = -coords.x * grid_scaling_factor
@@ -88,3 +90,9 @@ func make_P3_visible ():
 	$LabelPoint3.visible = true
 	$LineP2P3.visible = true
 	$LineP1P3.visible = true
+	
+func make_P3_invisible ():
+	$P3.visible = false
+	$LabelPoint3.visible = false
+	$LineP2P3.visible = false
+	$LineP1P3.visible = false

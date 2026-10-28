@@ -1,10 +1,11 @@
 extends Node2D
 
-var testing_points := [Vector3(1,2,3), Vector3(3, 3, 3)]
+var testing_points := [Vector3(1, 1, 1)]
 var inicialpointname := "A"
 var pointindice := 0
 var is_P3_visible := false
 var grid_scaling_factor: int = 48
+var text_offset_from
 
 
 # Called when the node enters the scene tree for the first time.
