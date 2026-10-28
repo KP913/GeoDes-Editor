@@ -6,7 +6,7 @@
 [node name="Point" type="Node2D" unique_id=55819580]
 script = ExtResource("1_q733i")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1163321947]
+[node name="LineP1P2" type="Line2D" parent="." unique_id=1163321947]
 points = PackedVector2Array(0, -56, 0, 0, 0, 56)
 width = 3.0
 default_color = Color(0, 0, 0, 1)
@@ -48,6 +48,7 @@ offset_top = 56.0
 offset_right = 56.0
 offset_bottom = 79.0
 text = "P1"
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelPoint2" type="Label" parent="." unique_id=2118741986]
 modulate = Color(0, 0, 0, 1)
