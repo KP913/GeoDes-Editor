@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cdjpf4i8tpwkx"]
+
+[node name="y_grid_line" type="Line2D" unique_id=262308039]
+points = PackedVector2Array(10000, 0, -10000, 0)
+width = 1.0
+default_color = Color(0.3019608, 0.3019608, 0.3019608, 0.5568628)

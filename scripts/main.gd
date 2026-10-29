@@ -34,16 +34,20 @@ func _on_a_projecao_toggled(toggled_on: bool) -> void:
 	$EixoY.visible = toggled_on
 	
 func add_eixo_x_linha (num: int):
-	var linha = preload("res://scenes/eixo_x_linha.tscn").instantiate()
+	var linha = preload("res://scenes/grid_lines/eixo_x_linha.tscn").instantiate()
 	linha.position.x = num*grid_scaling_factor
 	linha.get_node("Label").text = str(-num) # Inverted because negative numbers are to the right
 	$EixoXLinhas.add_child(linha)
 	
 func add_grid_line_x(num: int):
-	print("coolio")
+	var grid_line_x = preload("res://scenes/grid_lines/grid_line_x.tscn").instantiate()
+	grid_line_x.position.x = num*grid_scaling_factor
+	$EixoXGridLines.add_child(grid_line_x)
 
 func add_grid_line_y(num:int):
-	print("coolio but y")	
+	var grid_line_y = preload("res://scenes/grid_lines/grid_line_y.tscn").instantiate()
+	grid_line_y.position.y = num*grid_scaling_factor
+	$EixoYGridLines.add_child(grid_line_y)
 
 func add_point(coord: Vector3, name: String) -> void:
 	var ponto = preload("res://scenes/point.tscn").instantiate()

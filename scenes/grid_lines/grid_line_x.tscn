@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://caknadfs57swe"]
+
+[node name="x_grid_line" type="Line2D" unique_id=1952045808]
+points = PackedVector2Array(0, 5000, 0, -5000)
+width = 1.0
+default_color = Color(0.3019608, 0.3019608, 0.3019608, 0.5568628)
+metadata/_edit_vertical_guides_ = [-2182.0]
