@@ -14,3 +14,5 @@ func _input(event: InputEvent) -> void:
 		var vector = event.relative
 		position -= vector
 		position = position.clamp(Vector2(-limite_posicao*48, -limite_posicao*48), Vector2((limite_posicao+1)*48, (limite_posicao+1)*48))
+
+#TODO implement zooming $Camera2D.zoom might be useful

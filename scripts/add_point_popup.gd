@@ -15,9 +15,6 @@ func add_char(char: String):
 		if $LineEdit.text.length() != 0:
 			$LineEdit.text = $LineEdit.text.substr(0, $LineEdit.text.length() - 1)
 	else:
-		#if char == "-"
-			#var text_temp = $LineEdit.text +char
-			
 		$LineEdit.text += char
 
 func _on_line_edit_text_changed(new_text: String) -> void:
@@ -46,8 +43,7 @@ func submit_text() -> void:
 	point.y = int(list[1])
 	point.z = int(list[2])
 	
-	main.points.append(point)
-	main.add_point(point)
+	main.add_point(point, "AAA" + str(main.pointindice)) #TODO Change the point name here to the actual name
 	close_popup()
 
 func check_valid_minus(coords: String):
