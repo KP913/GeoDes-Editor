@@ -52,4 +52,5 @@ text = "3a projecao"
 [node name="AddPointPopup" parent="HUD" unique_id=2005043627 instance=ExtResource("3_sugp2")]
 visible = false
 
+[connection signal="pressed" from="HUD/AddPoint" to="HUD/AddPointPopup" method="popupoppen"]
 [connection signal="toggled" from="HUD/3aProjecao" to="." method="_on_a_projecao_toggled"]

@@ -56,3 +56,7 @@ func add_point(coord: Vector3, name: String) -> void:
 	pointindice += 1
 	$Pontos.add_child(ponto)
 		
+
+
+func _on_add_point_pressed() -> void:
+	pass # Replace with function body.

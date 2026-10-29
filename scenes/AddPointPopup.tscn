@@ -42,183 +42,289 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "Invalid Point!"
 
+[node name="SubmitMessage" type="Label" parent="." unique_id=1478623459]
+visible = false
+layout_mode = 0
+offset_left = -720.0
+offset_top = 426.66663
+offset_right = -552.0
+offset_bottom = 462.66663
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Invalid Point!"
+
 [node name="Panelbackshadow" type="Panel" parent="." unique_id=1933737347]
 layout_mode = 0
-offset_left = -112.00003
-offset_top = -32.000015
-offset_right = 208.0
-offset_bottom = 111.999985
+offset_left = -90.83334
+offset_top = -174.99998
+offset_right = 184.99997
+offset_bottom = 226.66667
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
 [node name="Panelshadow" type="Panel" parent="." unique_id=572576292]
 layout_mode = 0
-offset_left = -146.667
-offset_top = -55.7
-offset_right = -70.66701
-offset_bottom = -21.2
+offset_left = -125.00003
+offset_top = -219.16666
+offset_right = -57.666702
+offset_bottom = -124.499985
 scale = Vector2(5, 5)
 theme_override_styles/panel = SubResource("StyleBoxTexture_lquwl")
 
 [node name="Panel" type="Panel" parent="." unique_id=110245637]
 layout_mode = 0
-offset_left = -120.00003
-offset_top = -40.000015
-offset_right = 200.0
-offset_bottom = 103.999985
+offset_left = -93.33336
+offset_top = -174.16666
+offset_right = 174.16664
+offset_bottom = 215.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7mycd")
 
-[node name="LabelPopup" type="Label" parent="." unique_id=298085723]
+[node name="LabelX" type="Label" parent="." unique_id=885786609]
 layout_mode = 0
-offset_left = -104.00003
-offset_top = -24.000015
-offset_right = 77.99997
-offset_bottom = -1.0000153
+offset_left = -83.33335
+offset_top = -119.16667
+offset_right = 100.66665
+offset_bottom = -70.16667
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Adiciona ponto: (X,Y,Z)"
+text = "X:
+"
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=1885976812]
+[node name="LabelY" type="Label" parent="." unique_id=1496486900]
 layout_mode = 0
-offset_left = -106.66668
-offset_top = 6.6666594
-offset_right = 69.33332
-offset_bottom = 54.66666
+offset_left = -82.50002
+offset_top = -77.5
+offset_right = 101.49998
+offset_bottom = -2.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Y:
+
+"
+
+[node name="LabelZ" type="Label" parent="." unique_id=1662206125]
+layout_mode = 0
+offset_left = 71.66665
+offset_top = -123.33333
+offset_right = 255.66666
+offset_bottom = -22.333328
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Z:
+
+
+"
+
+[node name="LabelName" type="Label" parent="." unique_id=75252539]
+layout_mode = 0
+offset_left = 34.99998
+offset_top = -75.83333
+offset_right = 218.99998
+offset_bottom = 51.16667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Name:
+
+
+
+"
+
+[node name="LabelAdicionaPonto" type="Label" parent="." unique_id=298085723]
+layout_mode = 0
+offset_left = -83.33334
+offset_top = -165.83333
+offset_right = 100.66666
+offset_bottom = -142.83333
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Adiciona ponto: A(X,Y,Z)"
+
+[node name="Separator1" type="Line2D" parent="." unique_id=1593422630]
+position = Vector2(-2.5000305, -79.16667)
+points = PackedVector2Array(-90.83331, -55.83333, 177.5, -55.83333)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Separator2" type="Line2D" parent="." unique_id=1690545902]
+position = Vector2(-5.0000305, -158.33334)
+points = PackedVector2Array(-88.33331, 133.33334, 180.83331, 133.33334)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Separator3" type="Line2D" parent="." unique_id=514598220]
+position = Vector2(-10.0000305, -316.6667)
+points = PackedVector2Array(-84.16666, 459.1667, 183.33331, 459.1667)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="LineEditX" type="LineEdit" parent="." unique_id=1885976812]
+layout_mode = 0
+offset_left = -59.1667
+offset_top = -123.33333
+offset_right = 9.333302
+offset_bottom = -84.99999
+
+[node name="LineEditY" type="LineEdit" parent="." unique_id=816853744]
+layout_mode = 0
+offset_left = -59.166676
+offset_top = -75.83333
+offset_right = 9.333324
+offset_bottom = -37.499992
+
+[node name="LineEditZ" type="LineEdit" parent="." unique_id=594308163]
+layout_mode = 0
+offset_left = 94.16664
+offset_top = -125.0
+offset_right = 162.66664
+offset_bottom = -86.666664
+
+[node name="LineEditName" type="LineEdit" parent="." unique_id=1747472929]
+layout_mode = 0
+offset_left = 94.16663
+offset_top = -76.66667
+offset_right = 162.66663
+offset_bottom = -38.333336
 
 [node name="Button0" type="Button" parent="." unique_id=956445047]
 layout_mode = 0
-offset_left = 87.99994
-offset_top = -24.000015
-offset_right = 105.99994
-offset_bottom = -2.0000153
-theme_override_font_sizes/font_size = 10
+offset_left = -77.500015
+offset_top = -22.499992
+offset_right = -46.66667
+offset_bottom = 10.333336
+theme_override_font_sizes/font_size = 20
 text = "0"
 
 [node name="Button1" type="Button" parent="." unique_id=1876399605]
 layout_mode = 0
-offset_left = 119.99994
-offset_top = -24.000015
-offset_right = 137.99994
-offset_bottom = -2.0000153
+offset_left = -27.500021
+offset_top = -14.166667
+offset_right = -9.500021
+offset_bottom = 7.833333
 theme_override_font_sizes/font_size = 10
 text = "1"
 
 [node name="Button2" type="Button" parent="." unique_id=1978052029]
 layout_mode = 0
-offset_left = 151.99994
-offset_top = -24.000015
-offset_right = 169.99994
-offset_bottom = -2.0000153
+offset_left = 4.1666565
+offset_top = -11.666664
+offset_right = 22.166656
+offset_bottom = 10.33334
 theme_override_font_sizes/font_size = 10
 text = "2"
 
 [node name="Button3" type="Button" parent="." unique_id=1272513737]
 layout_mode = 0
-offset_left = 87.99994
-offset_top = 7.9999847
-offset_right = 105.99994
-offset_bottom = 29.999985
+offset_left = -77.50003
+offset_top = 25.833336
+offset_right = -59.50003
+offset_bottom = 47.833336
 theme_override_font_sizes/font_size = 10
 text = "3"
 
 [node name="Button4" type="Button" parent="." unique_id=468426687]
 layout_mode = 0
-offset_left = 119.99994
-offset_top = 7.9999847
-offset_right = 137.99994
-offset_bottom = 29.999985
+offset_left = -38.333344
+offset_top = 21.666676
+offset_right = -20.333344
+offset_bottom = 43.66668
 theme_override_font_sizes/font_size = 10
 text = "4"
 
 [node name="Button5" type="Button" parent="." unique_id=1101329465]
 layout_mode = 0
-offset_left = 151.99994
-offset_top = 7.9999847
-offset_right = 169.99994
-offset_bottom = 29.999985
+offset_left = 3.333313
+offset_top = 24.166672
+offset_right = 21.333313
+offset_bottom = 46.16668
 theme_override_font_sizes/font_size = 10
 text = "5"
 
 [node name="Button6" type="Button" parent="." unique_id=126129918]
 layout_mode = 0
-offset_left = 87.99994
-offset_top = 39.999985
-offset_right = 105.99994
-offset_bottom = 61.999985
+offset_left = -75.83336
+offset_top = 65.833336
+offset_right = -57.83336
+offset_bottom = 87.833336
 theme_override_font_sizes/font_size = 10
 text = "6"
 
 [node name="Button7" type="Button" parent="." unique_id=628818781]
 layout_mode = 0
-offset_left = 119.99994
-offset_top = 39.999985
-offset_right = 137.99994
-offset_bottom = 61.999985
+offset_left = -35.83336
+offset_top = 65.83334
+offset_right = -17.833359
+offset_bottom = 87.83334
 theme_override_font_sizes/font_size = 10
 text = "7"
 
 [node name="Button8" type="Button" parent="." unique_id=1832764987]
 layout_mode = 0
-offset_left = 151.99994
-offset_top = 39.999985
-offset_right = 169.99994
-offset_bottom = 61.999985
+offset_left = 5.833313
+offset_top = 65.83334
+offset_right = 23.833313
+offset_bottom = 87.83334
 theme_override_font_sizes/font_size = 10
 text = "8"
 
 [node name="Button9" type="Button" parent="." unique_id=1585137778]
 layout_mode = 0
-offset_left = 87.99994
-offset_top = 71.999985
-offset_right = 105.99994
-offset_bottom = 93.999985
+offset_left = -76.66669
+offset_top = 106.66666
+offset_right = -58.666687
+offset_bottom = 128.66666
 theme_override_font_sizes/font_size = 10
 text = "9"
 
+[node name="ButtonDot" type="Button" parent="." unique_id=1938525778]
+layout_mode = 0
+offset_left = -32.50003
+offset_top = 103.33331
+offset_right = -14.5000305
+offset_bottom = 125.33331
+theme_override_font_sizes/font_size = 10
+text = ".
+"
+
 [node name="ButtonComma" type="Button" parent="." unique_id=998696657]
 layout_mode = 0
-offset_left = 119.99994
-offset_top = 71.999985
-offset_right = 137.99994
-offset_bottom = 93.999985
+offset_left = 4.9999847
+offset_top = 106.66666
+offset_right = 22.999985
+offset_bottom = 128.66666
 theme_override_font_sizes/font_size = 10
 text = ","
 
 [node name="ButtonDelete" type="Button" parent="." unique_id=1257562399]
 layout_mode = 0
-offset_left = -106.66669
-offset_top = 66.66666
-offset_right = -76.00003
-offset_bottom = 92.66666
-theme_override_font_sizes/font_size = 10
+offset_left = 107.49999
+offset_top = 24.999992
+offset_right = 138.16666
+offset_bottom = 50.999992
+theme_override_font_sizes/font_size = 20
 text = "Del"
 
 [node name="ButtonSubmit" type="Button" parent="." unique_id=1325886487]
 layout_mode = 0
-offset_left = 13.333
-offset_top = 64.0
-offset_right = 69.33301
-offset_bottom = 94.0
-theme_override_font_sizes/font_size = 10
+offset_left = 105.8333
+offset_top = 67.49999
+offset_right = 161.83331
+offset_bottom = 97.49999
+theme_override_font_sizes/font_size = 20
 text = "Submeter"
 
 [node name="ButtonClose" type="Button" parent="." unique_id=1865221128]
 layout_mode = 0
-offset_left = 179.99995
-offset_top = -33.333347
-offset_right = 195.99995
-offset_bottom = -11.333347
+offset_left = 146.66666
+offset_top = -165.83331
+offset_right = 162.66666
+offset_bottom = -143.83331
 theme_override_font_sizes/font_size = 10
 text = "X"
 
 [node name="ButtonMinus" type="Button" parent="." unique_id=1265159772]
 layout_mode = 0
-offset_left = 153.333
-offset_top = 72.0
-offset_right = 171.333
-offset_bottom = 94.0
-theme_override_font_sizes/font_size = 10
+offset_left = 109.99997
+offset_top = -15.833332
+offset_right = 139.99997
+offset_bottom = 20.166668
+theme_override_font_sizes/font_size = 20
 text = "-"
 
-[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_changed" from="LineEditX" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Button0" to="." method="add_char" binds= ["0"]]
 [connection signal="pressed" from="Button1" to="." method="add_char" binds= ["1"]]
 [connection signal="pressed" from="Button2" to="." method="add_char" binds= ["2"]]

@@ -54,6 +54,3 @@ func check_valid_minus(coords: String):
 			if coord[i] == "-" and i != 0:
 				return false
 	return true
-				
-				
-				
