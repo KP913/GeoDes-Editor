@@ -52,7 +52,7 @@ func is_valid_coord(coord: String):
 	return coord.is_valid_float()
 	
 func is_valid_name(name: String):
-	var i =  0
+	var i = 0
 	for char in name:
 		if char not in valid_names:
 			return false
@@ -60,6 +60,7 @@ func is_valid_name(name: String):
 			return false
 		if char == name_separator and i == 0:
 			return false
+		i += 1
 	for ponto in main.get_node("Pontos").get_children():
 		if name == ponto.name:
 			return false
