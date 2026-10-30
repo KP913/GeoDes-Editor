@@ -1,13 +1,14 @@
 extends Node2D
 
-var coords := Vector3(3, 3, 3)
-var text_offset_from_point := Vector2(10, -24)
+var coords := Vector3(0, 0, 0)
+var text_offset_from_point
 var grid_scaling_factor: int
 @onready var main = find_parent("Main")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	grid_scaling_factor = main.grid_scaling_factor #Gets the grid scaling factor set in main
+	grid_scaling_factor = main.grid_scaling_factor
+	text_offset_from_point = main.text_offset_from_point
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

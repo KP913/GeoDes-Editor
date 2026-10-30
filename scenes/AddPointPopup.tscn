@@ -31,39 +31,6 @@ offset_bottom = 280.0
 scale = Vector2(1.2, 1.2)
 script = ExtResource("1_j55nv")
 
-[node name="ErrorMessageCoords" type="Label" parent="." unique_id=1391599296]
-visible = false
-layout_mode = 0
-offset_left = -360.0
-offset_top = 213.33331
-offset_right = -192.0
-offset_bottom = 249.33331
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "Coordenadas inválidas!"
-
-[node name="ErrorMessageName" type="Label" parent="." unique_id=872165948]
-visible = false
-layout_mode = 0
-offset_left = -360.0
-offset_top = 213.33331
-offset_right = -192.0
-offset_bottom = 249.33331
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "Nome Inválido!"
-
-[node name="SubmitMessage" type="Label" parent="." unique_id=1478623459]
-visible = false
-layout_mode = 0
-offset_left = -720.0
-offset_top = 426.66663
-offset_right = -552.0
-offset_bottom = 462.66663
-theme_override_colors/font_color = Color(0.23333335, 1, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "Ponto foi adicionado! <ponto>"
-
 [node name="Panelbackshadow" type="Panel" parent="." unique_id=1933737347]
 layout_mode = 0
 offset_left = -90.83334
@@ -220,10 +187,10 @@ H** = (0, 0, 0)
 
 [node name="LabelExplicação" type="Label" parent="." unique_id=1231680029]
 layout_mode = 0
-offset_left = -87.500015
-offset_top = -15.833331
-offset_right = 174.99995
-offset_bottom = 100.16667
+offset_left = -87.50003
+offset_top = -15.8333435
+offset_right = 174.99994
+offset_bottom = 100.16666
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
 text = "Casas decimais são definidas com .
@@ -233,6 +200,39 @@ por letras maiusculas
 
 
 "
+
+[node name="ErrorMessageName" type="Label" parent="." unique_id=872165948]
+visible = false
+layout_mode = 0
+offset_left = -360.0
+offset_top = 213.33331
+offset_right = -170.0
+offset_bottom = 249.33331
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Nome Inválido!"
+
+[node name="SubmitMessage" type="Label" parent="." unique_id=1478623459]
+visible = false
+layout_mode = 0
+offset_left = -362.49997
+offset_top = 204.99997
+offset_right = 14.5000305
+offset_bottom = 240.99997
+theme_override_colors/font_color = Color(0.08866667, 0.38, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Ponto foi adicionado! "
+
+[node name="ErrorMessageCoords" type="Label" parent="." unique_id=1391599296]
+visible = false
+layout_mode = 0
+offset_left = -360.0
+offset_top = 213.33331
+offset_right = -69.0
+offset_bottom = 249.33331
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Coordenadas inválidas!"
 
 [connection signal="pressed" from="ButtonSubmit" to="." method="submit_text"]
 [connection signal="pressed" from="ButtonClose" to="." method="close_popup"]

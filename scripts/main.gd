@@ -1,12 +1,14 @@
 extends Node2D
 
-var testing_points := [Vector3(1, 1, 1)]
+var testing_points := [Vector3(1.3, 1, 1)]
 var inicialpointname := "A"
 var pointindice := 0
 var is_P3_visible := false
 var grid_scaling_factor: int = 48
-var text_offset_from
+var text_offset_from_point := Vector2(10, -24)
 var percent_grid_line_opacity := 30
+var error_message_showtime := 5 #in seconds
+var name_separator := "*"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -55,8 +57,3 @@ func add_point(coord: Vector3, name: String) -> void:
 	ponto.name = name
 	pointindice += 1
 	$Pontos.add_child(ponto)
-		
-
-
-func _on_add_point_pressed() -> void:
-	pass # Replace with function body.

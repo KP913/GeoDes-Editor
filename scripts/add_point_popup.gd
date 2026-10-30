@@ -1,56 +1,88 @@
 extends Control
-var valid_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ",", "-"]
+var name_separator
+var error_message_showtime
+var valid_names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", name_separator]
 @onready var main = find_parent("Main")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	error_message_showtime = main.error_message_showtime
+	name_separator = main.name_separator
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func add_char(char: String):
-	if char == "DEL":
-		if $LineEdit.text.length() != 0:
-			$LineEdit.text = $LineEdit.text.substr(0, $LineEdit.text.length() - 1)
-	else:
-		$LineEdit.text += char
-
-func _on_line_edit_text_changed(new_text: String) -> void:
-	for char in new_text:
-		if char not in valid_chars:
-			$LineEdit.text = new_text.remove_char(ord(char))
 
 func close_popup() -> void:
-	$LineEdit.text = ""
+	clear_lines()
 	hide()
-	
-func popupoppen() -> void:
+
+func open_popup() -> void:
 	show()
 	
 func submit_text() -> void:
-	var list = $LineEdit.text.split(",")
-	if list.size() != 3:
-		$LineEdit.text = ""
-		$ErrorMessage.show()
-		await get_tree().create_timer(5).timeout
-		$ErrorMessage.hide()
+	var coord1 = $LineEditX.text
+	var coord2 = $LineEditY.text
+	var coord3 = $LineEditZ.text
+	var point_name = $LineEditName.text
+	clear_lines()
+	if not is_valid_coord(coord1) or not is_valid_coord(coord2) or not is_valid_coord(coord3):
+		show_coords_error()
 		return
-		
-	var point = Vector3()
-	point.x = int(list[0])
-	point.y = int(list[1])
-	point.z = int(list[2])
 	
-	main.add_point(point, "AAA" + str(main.pointindice)) #TODO Change the point name here to the actual name
-	close_popup()
+	if not is_valid_name(point_name):
+		show_name_error()
+		return
+	
+	var point = Vector3(float(coord1), float(coord2), float(coord3))
+	
+	show_success_message(point)
+	main.add_point(point, point_name)
 
-func check_valid_minus(coords: String):
-	var lista
-	lista = coords.split(",")
-	for coord in lista:
-		for i in coord.length():
-			if coord[i] == "-" and i != 0:
-				return false
+func clear_lines():
+	$LineEditX.text = ""
+	$LineEditY.text = ""
+	$LineEditZ.text = ""
+	$LineEditName.text = ""
+
+func is_valid_coord(coord: String):
+	return coord.is_valid_float()
+	
+func is_valid_name(name: String):
+	var i =  0
+	for char in name:
+		if char not in valid_names:
+			return false
+		if char != name_separator and i != 0:
+			return false
+		if char == name_separator and i == 0:
+			return false
+	for ponto in main.get_node("Pontos").get_children():
+		if name == ponto.name:
+			return false
 	return true
+	
+func show_coords_error():
+	$ErrorMessageCoords.show()
+	await get_tree().create_timer(error_message_showtime).timeout
+	$ErrorMessageCoords.hide()
+	
+func show_name_error():
+	$ErrorMessageName.show()
+	await get_tree().create_timer(error_message_showtime).timeout
+	$ErrorMessageName.hide()
+	
+func show_success_message(point: Vector3):
+	$SubmitMessage.text += str(point)
+	$SubmitMessage.show()
+	await get_tree().create_timer(error_message_showtime).timeout
+	$SubmitMessage.hide()
+	
+	
+	
+	
+
+	
